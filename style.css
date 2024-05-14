@@ -273,6 +273,11 @@ marquee img:hover {
 }
 
 @media screen and (max-width: 520px) {
+    nav {
+        width: 100vw;
+        transform: translate(100%, 0);
+    }
+    
     .game_item {
         width: 100%;
         height: 240px;
