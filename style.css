@@ -34,6 +34,10 @@ header,footer {
 main {
     flex: 1 1 auto;
     padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 label {
@@ -139,14 +143,28 @@ nav a:active {
     gap: 20px;
 }
 
-.slider h2 {
-    color: brown;
+.title {
+    color: #f1f1f1;
+    padding: 5px 0;
+    padding-right: 40px;
+    padding-left: 20px;
+    background-color: brown;
+    overflow: hidden;
+    width: max-content;
+    margin: 0 0 0 -20px;
+    -webkit-transform: skew(10deg);
+    -moz-transform: skew(10deg);
+    -o-transform: skew(10deg);
+}
+
+.title h2 {
+    transform: skew(-10deg);
 }
 
 marquee img {
     border: solid 2px black;
     border-radius: 10px;
-    transform: skewX(-5deg);
+    transform: skewX(5deg);
     height: 120px;
     -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
     -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
@@ -164,10 +182,6 @@ marquee img:hover {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-.games_last h2 {
-    color: brown;
 }
 
 /* контейнер для последних игр */
@@ -235,7 +249,7 @@ marquee img:hover {
 }
 
 .game_content button {
-    transform: skewX(-5deg);
+    transform: skewX(5deg);
     transition: all .1s linear;
     padding: 5px 20px;
     border: solid 1px #f1f1f1;
@@ -249,17 +263,15 @@ marquee img:hover {
 
 .game_content button:hover {
     border: solid 1px #f1f1f1;
-    background-color: brown;
-    color: #f1f1f1;
     background-color: #f1f1f1;
     color: brown;
 }
 
 .game_content button:active {
-    transform: scale(.9);
+    transform: scale(.9) skewX(5deg);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 520px) {
     .game_item {
         width: 100%;
         height: 240px;
