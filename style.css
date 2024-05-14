@@ -278,6 +278,12 @@ marquee img:hover {
         width: 100vw;
         transform: translate(100%, 0);
     }
+
+    nav label {
+        top: 25px;
+        left: auto;
+        right: 25px;
+    }
     
     .game_item {
         width: 100%;
