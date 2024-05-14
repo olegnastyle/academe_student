@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="body">
     <header>
         <h2>Academy TOP</h2>
         <label for="menu">Жанры</label>
@@ -136,5 +136,20 @@
     <footer>
         <h3>Academy TOP © 2024</h3>
     </footer>
+    <script>
+        let menu = document.getElementById('menu');
+        let body = document.getElementById('body').style;
+        let mql = window.matchMedia("(max-width: 520px)");
+
+        mql.addListener(function(e) {
+        if (e.matches) {
+            menu.addEventListener('change', function() {
+            this.checked ? body.overflow = 'hidden' : body.overflow = 'auto';
+            });
+        } else {
+            body.overflow = 'auto';
+        }
+        });
+    </script>
 </body>
 </html>
