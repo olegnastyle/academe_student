@@ -243,11 +243,13 @@ marquee img:hover {
 }
 
 .game_content p {
-    height: 55px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
+    text-wrap: wrap;
     font-size: 12px;
     opacity: .6;
-    text-wrap: wrap;
 }
 
 .game_content button {
